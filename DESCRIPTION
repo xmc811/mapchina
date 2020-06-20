@@ -1,11 +1,31 @@
 Package: mapchina
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Plot China Administrative Divisions
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Authors@R: c(
+        person("Mingchu", "Xu", email = "mxu.china@gmail.com", role = c("aut", "cre"))
+        )
+Description: mapchina is a package for plotting China administrative divisions in R
+Depends: 
+        R (>= 3.6)
+License: GPL-3 | file LICENSE
+LazyData: TRUE
+Imports:
+        dplyr,
+        ggplot2,
+        magrittr,
+        plyr,
+        purrr,
+        rlang,
+        stringr,
+        tibble,
+        tidyr
+Collate:
+        "data.R"
+        "globals.R"
+        "helpers.R"
+        "visualization.R"
+RoxygenNote: 7.0.2
 Encoding: UTF-8
-LazyData: true
+
+
