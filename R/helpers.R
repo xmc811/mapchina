@@ -1,6 +1,14 @@
 
 # Helper Functions
 
+#' Generate map colors
+#'
+#' @param sf An simple feature dataframe - the shapefile of investigation
+#'
+#' @return An integer vector - the indices of map colors
+#' @importFrom sf st_intersects
+#' @export
+
 generate_map_colors <- function(sf) {
 
         bd <- st_intersects(sf, sf, sparse = FALSE)
@@ -17,8 +25,20 @@ generate_map_colors <- function(sf) {
         return(colors)
 }
 
+#' Get the mex number of a vector
+#'
+#' @param v An logical vector - the intersection vector
+#' @param colors A integer vector - the color assignment vector
+#' @param idx An integer - the index
+#'
+#' @return An integer
+#' @export
+
 get_mex <- function(v, colors, idx) {
 
         res <- (v * colors)[1:idx]
         return(match(FALSE, 1:idx %in% res))
 }
+
+
+

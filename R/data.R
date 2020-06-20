@@ -1,6 +1,8 @@
 
-#' @title China Simple Feature Data
+#' China administraive division shapefile
 #'
-#' @description A dataframe with shapefile format
-#' @name china
-#' @format A simple feature dataframe
+#' A simple feature dataframe of China administrative divisions
+#'
+#' @format A simple feature dataframe of China administrative divisions
+
+"china"
