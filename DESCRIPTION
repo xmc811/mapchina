@@ -18,6 +18,7 @@ Imports:
         plyr,
         purrr,
         rlang,
+        rmapshaper,
         stringr,
         tibble,
         tidyr
