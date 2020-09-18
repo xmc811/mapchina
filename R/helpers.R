@@ -1,7 +1,7 @@
 
 # Helper Functions
 
-#' Generate map colors by greedy coloring algorithm
+#' Generate map colors by greedy coloring algorithm so that bordering features are colored differently
 #'
 #' @param sf An simple feature dataframe - the shapefile of investigation
 #'

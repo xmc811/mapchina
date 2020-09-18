@@ -1,11 +1,11 @@
 Package: mapchina
 Type: Package
-Title: Plot China Administrative Divisions
+Title: China Administrative Divisions Data
 Version: 0.1.0
 Authors@R: c(
         person("Mingchu", "Xu", email = "mxu.china@gmail.com", role = c("aut", "cre"))
         )
-Description: mapchina is a package for plotting China administrative divisions in R.
+Description: mapchina is an R package to store the shapefile data of China administrative divisions, up to the county (district) level.
 Depends: 
         R (>= 3.6)
 License: GPL-3 | file LICENSE
