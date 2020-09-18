@@ -20,6 +20,5 @@ Collate:
         "data.R"
         "globals.R"
         "helpers.R"
-        "visualization.R"
 RoxygenNote: 7.1.1
 Encoding: UTF-8
