@@ -2,7 +2,7 @@
 % Please edit documentation in R/helpers.R
 \name{generate_map_colors}
 \alias{generate_map_colors}
-\title{Generate map colors}
+\title{Generate map colors by greedy coloring algorithm so that bordering features are colored differently}
 \usage{
 generate_map_colors(sf)
 }
@@ -13,5 +13,5 @@ generate_map_colors(sf)
 An integer vector - the indices of map colors
 }
 \description{
-Generate map colors
+Generate map colors by greedy coloring algorithm so that bordering features are colored differently
 }

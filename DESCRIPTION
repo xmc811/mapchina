@@ -11,23 +11,15 @@ Depends:
 License: GPL-3 | file LICENSE
 LazyData: TRUE
 Imports:
+        sf
+Suggests:
         dplyr,
         ggplot2,
-        RColorBrewer,
-        magrittr,
-        plyr,
-        purrr,
-        rlang,
-        rmapshaper,
-        stringr,
-        tibble,
-        tidyr
+        RColorBrewer
 Collate:
         "data.R"
         "globals.R"
         "helpers.R"
         "visualization.R"
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.1
 Encoding: UTF-8
-
-

@@ -9,7 +9,7 @@ get_mex(v, colors, idx)
 \arguments{
 \item{v}{An logical vector - the intersection vector}
 
-\item{colors}{A integer vector - the color assignment vector}
+\item{colors}{An integer vector - the color assignment vector}
 
 \item{idx}{An integer - the index}
 }
