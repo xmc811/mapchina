@@ -1,7 +1,7 @@
 
 # Helper Functions
 
-#' Generate map colors
+#' Generate map colors by greedy coloring algorithm
 #'
 #' @param sf An simple feature dataframe - the shapefile of investigation
 #'
@@ -28,7 +28,7 @@ generate_map_colors <- function(sf) {
 #' Get the mex number of a vector
 #'
 #' @param v An logical vector - the intersection vector
-#' @param colors A integer vector - the color assignment vector
+#' @param colors An integer vector - the color assignment vector
 #' @param idx An integer - the index
 #'
 #' @return An integer
