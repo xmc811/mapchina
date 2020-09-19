@@ -123,7 +123,9 @@ ggplot() +
 ### 5. Plotting the administrative divisions at higher levels (province or perfecture level)
 ### 对省地级行政区作图
 
-The geometry of county-level shapes can be merged to higher level administrative divisions by functions `group_by()`, `summarise()`, and `sf::st_union()`.
+The geometry of county-level divisions can be merged to higher level divisions by functions `group_by()`, `summarise()`, and `sf::st_union()`.
+
+县级行政区可被合并为地级或省级行政区进行作图。
 
 ```R
 df3 <- china %>%
@@ -142,6 +144,32 @@ ggplot(data = df3) +
 
 <p align="center">
 <img src=https://github.com/xmc811/mapchina/blob/master/images/plot_4.png/>
+</p>
+
+
+---
+
+### 6. Adding Chinese characters to the map
+### 在地图中加入汉字标记
+
+To add Chinese characters for the map, R package `showtext` is required.
+
+```R
+if (!require("showtext")) {
+install.packages("showtext")
+
+showtext::showtext_auto()
+
+ggplot(data = df3) +
+        geom_sf(aes(fill = Name_Province)) +
+        scale_fill_brewer(palette = "Set3") +
+        theme_bw() +
+        theme(legend.position = "none") +
+        geom_sf_label(aes(label = Name_Province))
+```
+
+<p align="center">
+<img src=https://github.com/xmc811/mapchina/blob/master/images/plot_5.png/>
 </p>
 
 
