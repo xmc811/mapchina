@@ -48,7 +48,7 @@ The codes and names follow the 3-level hierarchy: Province (2-digit), Perfecture
 
 注意：直辖市、特别行政区、台湾地区、省直管市以及其他特殊行政区域的地级区域名称`Name_Perfecture`为`NA`。用户可根据作图需要进行修改。
 
-
+---
 
 ### 2. Plotting the population density rank of Beijing, Tianjin, and Hebei 
 ### 京津冀县级人口密度排名作图
@@ -73,6 +73,7 @@ ggplot() +
 <img src=https://github.com/xmc811/mapchina/blob/master/images/plot_1.png/>
 </p>
 
+---
 
 ### 3. Plotting the map with customized data
 ### 使用新加入的数据作图
