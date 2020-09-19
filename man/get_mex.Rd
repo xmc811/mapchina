@@ -19,3 +19,7 @@ An integer
 \description{
 Get the mex number of a vector
 }
+\examples{
+get_mex(c(TRUE,TRUE,FALSE,FALSE,TRUE), 1:5, 4)
+
+}

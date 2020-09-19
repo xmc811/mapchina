@@ -15,3 +15,7 @@ An integer vector - the indices of map colors
 \description{
 Generate map colors by greedy coloring algorithm so that bordering features are colored differently
 }
+\examples{
+generate_map_colors(head(china, 10))
+
+}

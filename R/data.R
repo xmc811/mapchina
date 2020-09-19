@@ -24,6 +24,6 @@
 #' \item{Geometry}{vector geometry of the administrative division.}
 #' }
 #' @examples
-#' china
+#' head(china)
 
 "china"

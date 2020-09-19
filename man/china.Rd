@@ -34,6 +34,6 @@ china
 A simple feature dataframe of China administrative divisions. The data was originally queried from OpenStreetMap and manually corrected for errors in QGIS
 }
 \examples{
-china
+head(china)
 }
 \keyword{datasets}

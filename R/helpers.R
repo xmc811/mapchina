@@ -7,6 +7,10 @@
 #'
 #' @return An integer vector - the indices of map colors
 #' @importFrom sf st_intersects
+#'
+#' @examples
+#' generate_map_colors(head(china, 10))
+#'
 #' @export
 
 generate_map_colors <- function(sf) {
@@ -32,6 +36,10 @@ generate_map_colors <- function(sf) {
 #' @param idx An integer - the index
 #'
 #' @return An integer
+#'
+#' @examples
+#' get_mex(c(TRUE,TRUE,FALSE,FALSE,TRUE), 1:5, 4)
+#'
 #' @export
 
 get_mex <- function(v, colors, idx) {
