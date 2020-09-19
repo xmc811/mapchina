@@ -61,9 +61,8 @@ library(tidyverse)
 df <- china %>%
         filter(Code_Province %in% c("11","12","13"))
 
-ggplot() +
-        geom_sf(data = df,
-                aes(fill = rank(Density))) +
+ggplot(data = df) +
+        geom_sf(aes(fill = rank(Density))) +
         scale_fill_distiller(palette = "BuPu", direction = 1) +
         theme_bw() +
         theme(legend.position = "none")
@@ -83,9 +82,8 @@ New data can be added to the shapefile dataframe as new variables
 ```R
 df$Var <- runif(nrow(df))
 
-ggplot() +
-        geom_sf(data = df,
-                aes(fill = Var)) +
+ggplot(data = df) +
+        geom_sf(aes(fill = Var)) +
         scale_fill_distiller(palette = "YlOrRd") +
         theme_bw() +
         theme(legend.position = "none")
@@ -106,8 +104,8 @@ We use greedy coloring algorithm to solve the problem. The function `generate_ma
 df2 <- china %>%
         filter(Code_Province %in% c("32"))
 
-ggplot() +
-        geom_sf(data = df2, aes(fill = factor(generate_map_colors(df2)))) +
+ggplot(data = df2) +
+        geom_sf(aes(fill = factor(generate_map_colors(df2)))) +
         scale_fill_brewer(palette = "Set3") +
         theme_bw() +
         theme(legend.position = "none")
@@ -170,6 +168,43 @@ ggplot(data = df3) +
 
 <p align="center">
 <img src=https://github.com/xmc811/mapchina/blob/master/images/plot_5.png/>
+</p>
+
+
+---
+
+### 7. A comprehensive example
+### 综合示例：多省地图，按地级行政区划随机着色并加汉字标记，各级区划分界线不同
+
+
+```R
+showtext::showtext_auto()
+
+df4 <- china %>%
+        filter(Code_Province %in% c("32","34"))
+
+df4_prov <- df4 %>%
+        group_by(Name_Province) %>%
+        summarise(geometry = st_union(geometry))
+
+df4_perf <- df4 %>%
+        group_by(Name_Perfecture) %>%
+        summarise(geometry = st_union(geometry))
+
+ggplot() +
+        geom_sf(data = df4_perf,
+                aes(fill = factor(generate_map_colors(df4_perf))),
+                linetype = "solid", size = 0.5) +
+        scale_fill_brewer(palette = "Pastel1") +
+        geom_sf(data = df4, alpha = 0, linetype = "dashed", size = 0.2) +
+        geom_sf(data = df4_prov, alpha = 0, linetype = "solid", size = 1.2) +
+        geom_sf_label(data = df4_perf, aes(label = Name_Perfecture)) +
+        theme_bw() +
+        theme(legend.position = "none")
+```
+
+<p align="center">
+<img src=https://github.com/xmc811/mapchina/blob/master/images/plot_6.png/>
 </p>
 
 
