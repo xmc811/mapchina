@@ -37,8 +37,10 @@ geographic CRS: WGS 84
 # … with 1 more variable: geometry <MULTIPOLYGON [°]>
 ```
 
-### 2. Plot the population density rank of Beijing, Tianjin, and Hebei 
+### 2. Plotting the population density rank of Beijing, Tianjin, and Hebei 
 ### 京津冀县级人口密度排名作图
+
+Since the shapefile data is also a dataframe, it can be plotted by ggplot grammer of graphics. The geometric object is `geom_sf()`. 
 
 ```R
 library(tidyverse)
@@ -52,11 +54,31 @@ ggplot() +
         scale_fill_distiller(palette = "BuPu", direction = 1) +
         theme_bw() +
         theme(legend.position = "none")
-        
 ```
 
 <p align="center">
 <img src=https://github.com/xmc811/mapchina/blob/master/images/plot_1.png/>
+</p>
+
+
+### 3. Plotting the map with customized data
+### 使用新加入的数据作图
+
+New data can be added to the shapefile dataframe as new variables
+
+```R
+df$Var <- runif(nrow(df))
+
+ggplot() +
+        geom_sf(data = df,
+                aes(fill = Var)) +
+        scale_fill_distiller(palette = "YlOrRd") +
+        theme_bw() +
+        theme(legend.position = "none")
+```
+
+<p align="center">
+<img src=https://github.com/xmc811/mapchina/blob/master/images/plot_2.png/>
 </p>
 
 
