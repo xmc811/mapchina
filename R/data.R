@@ -3,25 +3,25 @@
 #'
 #' A simple feature dataframe of China administrative divisions. The data was originally queried from OpenStreetMap and manually corrected for errors in QGIS
 #'
-#' @source <https://www.openstreetmap.org/>
+#' @source <https://www.openstreetmap.org/> <http://www.mca.gov.cn/article/sj/xzqh/1980/2019/202002281436.html>
 #'
 #' @format A simple feature dataframe of China administrative divisions
 #'
 #' \describe{
-#' \item{ID}{Unique OpenFlights identifier for this airport.}
-#' \item{Name}{Name of airport. May or may not contain the City name.}
-#' \item{City}{Main city served by airport. May be spelled differently from Name.}
-#' \item{Country}{Country or territory where airport is located. See Countries to cross-reference to ISO 3166-1 codes.}
-#' \item{IATA}{3-letter IATA code. Null if not assigned/unknown.}
-#' \item{ICAO}{4-letter ICAO code. Null if not assigned.}
-#' \item{Latitude}{Decimal degrees, usually to six significant digits. Negative is South, positive is North.}
-#' \item{Longtitude}{Decimal degrees, usually to six significant digits. Negative is West, positive is East.}
-#' \item{Altitude}{In feet.}
-#' \item{Timezone}{Hours offset from UTC. Fractional hours are expressed as decimals, eg. India is 5.5.}
-#' \item{DST}{Daylight savings time. One of E (Europe), A (US/Canada), S (South America), O (Australia), Z (New Zealand), N (None) or U (Unknown). }
-#' \item{TZName}{Timezone in \href{http://en.wikipedia.org/wiki/Tz_database}{"tz" (Olson) format}, eg. "America/Los_Angeles".}
-#' \item{Type}{Type of the airport. Value "airport" for air terminals, "station" for train stations, "port" for ferry terminals and "unknown" if not known. In airports.csv, only type=airport is included.}
-#' \item{Source}{Source of this data. "OurAirports" for data sourced from \href{http://ourairports.com/data/}{OurAirports}, "Legacy" for old data not matched to OurAirports (mostly DAFIF), "User" for unverified user contributions. }
+#' \item{Code_County}{Code of county-level administrative division.}
+#' \item{Code_Perfecture}{Code of perfecture-level administrative division.}
+#' \item{Code_Province}{Code of province-level administrative division.}
+#' \item{Name_Province}{Chinese name of province-level administrative division.}
+#' \item{Name_Perfecture}{Chinese name of perfecture-level administrative division.}
+#' \item{Name_County}{Chinese name of county-level administrative division.}
+#' \item{Pinyin}{Chinese Pinyin.}
+#' \item{Pop_2000}{Population in Year 2000.}
+#' \item{Pop_2010}{Population in Year 2010.}
+#' \item{Pop_2017}{Estimated population in Year 2017.}
+#' \item{Pop_2018}{Estimated population in Year 2018.}
+#' \item{Area}{Land area in square km.}
+#' \item{Density}{Population density in every square km.}
+#' \item{Geometry}{vector geometry of the administrative division.}
 #' }
 #' @examples
 #' china
