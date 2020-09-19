@@ -37,6 +37,16 @@ geographic CRS: WGS 84
 # … with 1 more variable: geometry <MULTIPOLYGON [°]>
 ```
 
+The main data object `china` is a dataframe, with each row as one county/district level administrative division of China. 
+To plot the map of a particular region, you can `filter()` codes or names to subset the dataframe. 
+The codes are stored in variables `Code_Province`, `Code_Perfecture`, and `Code_County`, 
+and the names are stored in `Name_Province`, `Name_Perfecture`, and `Name_County`.
+The codes and names follow the 3-level hierarchy: Province (2-digit), Perfecture (4-digit), and County (6-digit).
+
+在矢量数据`china`中，行政区划的中文名与代码均分为三级：省级、地级与县级，可使用`filter()`进行任意筛选。
+注意：直辖市、特别行政区、台湾地区、省直管市以及其他特殊行政区域的地级区域名称`Name_Perfecture`为`NA`。用户可根据作图需要进行修改。
+
+
 ### 2. Plotting the population density rank of Beijing, Tianjin, and Hebei 
 ### 京津冀县级人口密度排名作图
 
