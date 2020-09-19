@@ -95,5 +95,53 @@ ggplot() +
 <img src=https://github.com/xmc811/mapchina/blob/master/images/plot_2.png/>
 </p>
 
+---
+
+### 4. Plotting the map with random color, but no two adjacent regions have the same color. 
+### 随机颜色作图并使得相邻区域颜色不一样
+
+We use greedy coloring algorithm to solve the problem. The function `generate_map_colors()` takes a shapefile dataframe as input and outputs a list of index for filling colors.
+
+```R
+df2 <- china %>%
+        filter(Code_Province %in% c("32"))
+
+ggplot() +
+        geom_sf(data = df2, aes(fill = factor(generate_map_colors(df2)))) +
+        scale_fill_brewer(palette = "Set3") +
+        theme_bw() +
+        theme(legend.position = "none")
+```
+
+<p align="center">
+<img src=https://github.com/xmc811/mapchina/blob/master/images/plot_3.png/>
+</p>
+
+
+---
+
+### 5. Plotting the administrative divisions at higher levels (province or perfecture level)
+### 对省地级行政区作图
+
+The geometry of county-level shapes can be merged to higher level administrative divisions by functions `group_by()`, `summarise()`, and `sf::st_union()`.
+
+```R
+df3 <- china %>%
+        filter(Code_Province %in% as.character(31:36))
+
+df3 <- df3 %>%
+        group_by(Name_Province) %>%
+        summarise(geometry = st_union(geometry))
+
+ggplot(data = df3) +
+        geom_sf(aes(fill = Name_Province)) +
+        scale_fill_brewer(palette = "Set3") +
+        theme_bw() +
+        theme(legend.position = "none")
+```
+
+<p align="center">
+<img src=https://github.com/xmc811/mapchina/blob/master/images/plot_4.png/>
+</p>
 
 
