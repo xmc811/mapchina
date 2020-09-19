@@ -7,12 +7,12 @@ An R package storing geospatial vector data format (shapefile) of China administ
 [![Build Status](https://travis-ci.org/xmc811/mapchina.svg?branch=master)](https://travis-ci.org/xmc811/mapchina)
 [![Build status](https://ci.appveyor.com/api/projects/status/lrtfd685ytnj9yvd/branch/master?svg=true)](https://ci.appveyor.com/project/xmc811/mapchina/branch/master)
 
+---
 
-### Examples
+## Examples 使用示例
 
-To browse the top rows of the shapefile:
-
-查看矢量地图数据：
+### 1. Browsing the dataframe of the shapefile 
+### 查看矢量地图数据
 
 ```R
 head(china)
@@ -37,9 +37,8 @@ geographic CRS: WGS 84
 # … with 1 more variable: geometry <MULTIPOLYGON [°]>
 ```
 
-To plot the population density rank of Beijing, Tianjin, and Hebei:
-
-京津冀县级人口密度排名作图：
+### 2. Plot the population density rank of Beijing, Tianjin, and Hebei 
+### 京津冀县级人口密度排名作图
 
 ```R
 library(tidyverse)
