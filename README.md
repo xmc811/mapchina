@@ -19,6 +19,7 @@ head(china)
 ```
 
 ```R
+# Output 输出
 Simple feature collection with 6 features and 13 fields
 geometry type:  MULTIPOLYGON
 dimension:      XY
@@ -35,3 +36,29 @@ geographic CRS: WGS 84
 6 110116      1101            11            北京市        NA              怀柔区      Huáir…   296002   372887       NA   414000 2123      195.
 # … with 1 more variable: geometry <MULTIPOLYGON [°]>
 ```
+
+To plot the population density rank of Beijing, Tianjin, and Hebei:
+
+京津冀县级人口密度排名作图：
+
+```R
+library(tidyverse)
+
+df <- china %>%
+        filter(Code_Province %in% c("11","12","13"))
+
+ggplot() +
+        geom_sf(data = df,
+                aes(fill = rank(Density))) +
+        scale_fill_distiller(palette = "BuPu", direction = 1) +
+        theme_bw() +
+        theme(legend.position = "none")
+        
+```
+
+<p align="center">
+<img src=https://github.com/xmc811/mapchina/blob/master/images/plot_1.png/>
+</p>
+
+
+
