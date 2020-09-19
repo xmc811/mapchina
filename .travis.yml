@@ -4,11 +4,11 @@
 language: r
 cache: packages
 r:
-        - release
-        - devel
+  - release
+  - devel
 
 addons:
-        apt:
-        packages:
-        - libudunits2-dev
-        - libgdal-dev
+  apt:
+    packages:
+      - libudunits2-dev
+      - libgdal-dev
