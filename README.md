@@ -1,6 +1,6 @@
 # mapchina
 
-An R package storing geospatial vector data format (shapefile) of China administrative divisions to the county/district-level.
+An R package storing the geospatial shapefile (vector data) of China administrative divisions to the county/district-level.
 
 ### 中华人民共和国区县级行政区划矢量地图数据
 
