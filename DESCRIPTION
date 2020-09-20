@@ -1,11 +1,11 @@
 Package: mapchina
 Type: Package
-Title: China Administrative Divisions Data
+Title: China Administrative Divisions Geospatial Shapefile Data
 Version: 0.1.0
 Authors@R: c(
         person("Mingchu", "Xu", email = "mxu.china@gmail.com", role = c("aut", "cre"))
         )
-Description: mapchina is an R package to store the shapefile data of China administrative divisions, up to the county (district) level.
+Description: mapchina is an R package storing the geospatial shapefile data of China administrative divisions to the county/district-level.
 Depends: 
         R (>= 3.6)
 License: GPL-3 | file LICENSE
@@ -15,7 +15,8 @@ Imports:
 Suggests:
         dplyr,
         ggplot2,
-        RColorBrewer
+        RColorBrewer,
+        showtext
 Collate:
         "data.R"
         "globals.R"
