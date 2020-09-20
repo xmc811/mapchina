@@ -1,6 +1,6 @@
 Package: mapchina
 Type: Package
-Title: China administrative divisions geospatial shapefile data
+Title: China Administrative Divisions Geospatial Shapefile Data
 Version: 0.1.0
 Authors@R: c(
         person("Mingchu", "Xu", email = "mxu.china@gmail.com", role = c("aut", "cre"))
