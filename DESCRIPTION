@@ -8,7 +8,7 @@ Authors@R: c(
 Description: Geospatial shapefile data of China administrative divisions to the county/district-level.
 Depends: 
         R (>= 3.6)
-License: GPL-3 | file LICENSE
+License: GPL-3
 LazyData: TRUE
 Imports:
         sf
