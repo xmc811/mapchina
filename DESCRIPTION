@@ -5,7 +5,7 @@ Version: 0.1.0
 Authors@R: c(
         person("Mingchu", "Xu", email = "mxu.china@gmail.com", role = c("aut", "cre"))
         )
-Description: R package storing the geospatial shapefile data of China administrative divisions to the county/district-level.
+Description: Geospatial shapefile data of China administrative divisions to the county/district-level.
 Depends: 
         R (>= 3.6)
 License: GPL-3 | file LICENSE
@@ -21,5 +21,7 @@ Collate:
         "data.R"
         "globals.R"
         "helpers.R"
+URL: https://github.com/xmc811/mapchina
+BugReports: https://github.com/xmc811/mapchina/issues
 RoxygenNote: 7.1.1
 Encoding: UTF-8
