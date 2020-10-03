@@ -6,6 +6,8 @@ An R package storing the geospatial shapefile (vector data) of China administrat
 
 [![Build Status](https://travis-ci.org/xmc811/mapchina.svg?branch=master)](https://travis-ci.org/xmc811/mapchina)
 [![Build status](https://ci.appveyor.com/api/projects/status/lrtfd685ytnj9yvd/branch/master?svg=true)](https://ci.appveyor.com/project/xmc811/mapchina/branch/master)
+[![Version](https://www.r-pkg.org/badges/version/mapchina)](https://www.r-pkg.org/badges/version/mapchina)
+[![Download](https://cranlogs.r-pkg.org/badges/grand-total/mapchina)](https://cranlogs.r-pkg.org/badges/grand-total/mapchina)
 
 ### Installation
 
