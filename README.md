@@ -11,8 +11,21 @@ An R package storing the geospatial shapefile (vector data) of China administrat
 
 ### Installation
 
+To install CRAN version 安装CRAN正式版本:
+
 ```R
 install.packages("mapchina")
+library(mapchina)
+```
+
+To install the most updated version of the 'dev' branch 安装开发中的最新版本:
+
+```R
+if (!require(devtools)) {
+  install.packages("devtools")
+}
+
+devtools::install_github("xmc811/mapchina", ref = "dev")
 library(mapchina)
 ```
 
