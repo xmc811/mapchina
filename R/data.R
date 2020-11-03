@@ -9,10 +9,10 @@
 #'
 #' \describe{
 #' \item{Code_County}{Code of county-level administrative division.}
-#' \item{Code_Perfecture}{Code of perfecture-level administrative division.}
+#' \item{Code_Prefecture}{Code of prefecture-level administrative division.}
 #' \item{Code_Province}{Code of province-level administrative division.}
 #' \item{Name_Province}{Chinese name of province-level administrative division.}
-#' \item{Name_Perfecture}{Chinese name of perfecture-level administrative division.}
+#' \item{Name_Prefecture}{Chinese name of prefecture-level administrative division.}
 #' \item{Name_County}{Chinese name of county-level administrative division.}
 #' \item{Pinyin}{Chinese Pinyin.}
 #' \item{Pop_2000}{Population in Year 2000.}
