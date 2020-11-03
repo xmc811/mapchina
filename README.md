@@ -64,6 +64,7 @@ Since the shapefile data is also a dataframe, it can be plotted by ggplot gramme
 
 ```R
 library(tidyverse)
+library(sf)
 
 df <- china %>%
         filter(Code_Province %in% c("11","12","13"))
