@@ -15,7 +15,6 @@ To install CRAN version 安装CRAN正式版本:
 
 ```R
 install.packages("mapchina")
-library(mapchina)
 ```
 
 To install the most updated version of the 'dev' branch 安装开发中的最新版本:
@@ -26,7 +25,6 @@ if (!require(devtools)) {
 }
 
 devtools::install_github("xmc811/mapchina", ref = "dev")
-library(mapchina)
 ```
 
 ---
@@ -37,6 +35,7 @@ library(mapchina)
 ### 查看矢量地图数据
 
 ```R
+library(mapchina)
 head(china)
 ```
 
