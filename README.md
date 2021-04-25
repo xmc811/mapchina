@@ -71,7 +71,17 @@ The codes and names follow the 3-level hierarchy: Province (2-digit), Perfecture
 
 ---
 
-### 2. Plotting the population density rank of Beijing, Tianjin, and Hebei 
+### 2. Export the data to shapefile
+### 将数据导出为矢量文件
+
+```R
+library(sf)
+st_write(china, "your/path/to/china.shp", layer_options = "ENCODING=UTF-8")
+```
+
+---
+
+### 3. Plotting the population density rank of Beijing, Tianjin, and Hebei 
 ### 京津冀县级人口密度排名作图
 
 Since the shapefile data is also a dataframe, it can be plotted by ggplot grammer of graphics. The geometric object is `geom_sf()`. 
@@ -96,7 +106,7 @@ ggplot(data = df) +
 
 ---
 
-### 3. Plotting the map with customized data
+### 4. Plotting the map with customized data
 ### 使用新加入的数据作图
 
 New data can be added to the shapefile dataframe as new variables
@@ -117,7 +127,7 @@ ggplot(data = df) +
 
 ---
 
-### 4. Plotting the map with random color, but no two adjacent regions have the same color. 
+### 5. Plotting the map with random color, but no two adjacent regions have the same color. 
 ### 随机颜色作图并使得相邻区域颜色不一样
 
 We use greedy coloring algorithm to solve the problem. The function `generate_map_colors()` takes a shapefile dataframe as input and outputs a list of index for filling colors.
@@ -140,7 +150,7 @@ ggplot(data = df2) +
 
 ---
 
-### 5. Plotting the administrative divisions at higher levels (province or perfecture level)
+### 6. Plotting the administrative divisions at higher levels (province or perfecture level)
 ### 对省地级行政区作图
 
 The geometry of county-level divisions can be merged to higher level divisions by functions `group_by()`, `summarise()`, and `sf::st_union()`.
@@ -169,7 +179,7 @@ ggplot(data = df3) +
 
 ---
 
-### 6. Adding Chinese characters to the map
+### 7. Adding Chinese characters to the map
 ### 在地图中加入汉字标记
 
 To add Chinese characters for the map, R package `showtext` is required.
@@ -195,7 +205,7 @@ ggplot(data = df3) +
 
 ---
 
-### 7. A comprehensive example
+### 8. A comprehensive example
 ### 综合示例：多省地图，按地级行政区划随机着色并加汉字标记，各级区划分界线不同
 
 
